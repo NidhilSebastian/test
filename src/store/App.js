@@ -10,7 +10,7 @@ export const actionCreators = {
     return false;
   },
   logoutUser: () => async (dispatch, getState) => {
-    dispatch({type: "LOGIN", data: null});
+    dispatch({type: "LOGOUT", data: null});
   }
 };
 
@@ -20,6 +20,7 @@ export const AppReducer = (state = AppInitialState, action) => {
         sessionStorage.setItem("user", action.data);
         return { ...state, user: action.data };
     case "LOGOUT":
+      sessionStorage.removeItem("user");
       return { ...state, user: null };
     default:
       return { ...state, errorMessage: null };

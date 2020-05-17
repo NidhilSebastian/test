@@ -1,6 +1,5 @@
 import React from 'react';
 import Login from './components/Login';
-import Home from './containers/Home'
 import Layout from './components/Layout'
 import './App.css';
 import { bindActionCreators } from "redux";
@@ -13,7 +12,7 @@ function App(props) {
   }
   return (
     <div className="container-fluid">
-       <Layout></Layout>
+       <Layout  {...props}></Layout>
     </div>
   );
 }
