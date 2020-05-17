@@ -3,7 +3,7 @@ import { AppInitialState } from "./initialState";
 export const actionCreators = {
   loginUser: (username, password) => async (dispatch, getState) => {
     console.log(username, password);
-    if(username === "user" && password === "password"){
+    if(username === "username" && password === "password"){
       dispatch({type: "LOGIN", data: username});
       return true;
     }

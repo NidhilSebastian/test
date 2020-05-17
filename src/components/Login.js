@@ -29,8 +29,7 @@ class Login extends Component {
     }
     render() {
         return (
-            <div className="container"> 
-                {this.state.errorMessage? <div class="alert alert-danger" role="alert">{this.state.errorMessage}</div> : null}
+            <div  className="container ">                
                 <div style={{height: "150px"}} >
                 </div>             
                 <div className="d-flex justify-content-center h-200">
@@ -69,7 +68,8 @@ class Login extends Component {
                                 </div>
                             </form>
                         </div>
-                        <div className="card-footer">                           
+                        <div className="card-footer"> 
+                        {this.state.errorMessage? <div class="alert alert-danger" role="alert">{this.state.errorMessage}</div> : null}                          
                         </div>
                     </div>
                 </div>
